@@ -1,0 +1,58 @@
+site_name: KolAi Docs
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  # favicon: assets/favicon-32x32.png
+  icon: 
+    logo: simple/bookstack
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features: 
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+#    - navigation.sections
+#    - navigation.expand
+#    - navigation.indexes
+    - toc.follow
+#    - toc.integrate
+    - navigation.top
+    - search.suggestions
+    - search.highlight
+    - search.share
+
+plugins: 
+  - search
+#  - tags
+  - mkdocs-video
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Laser Design:
+    - KolAi Designer: laser/kolai-designer.md
+    - Photoshop Plugin: laser/ps-plugin.md
+  - 3D Design: 
+    - KolAi 3D Designer: 3d/3d-designer.md
+    - Photoshop Plugin: 3d/ps-plugin.md
+  - API: api.md
